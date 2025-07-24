@@ -9,6 +9,7 @@ Nibble AI is a sleek, dark-themed AI-powered mobile app built with **React Nativ
 ## 🚀 Features
 
 - ✨ AI-generated recipe suggestions based on your input
+- 📅 Build the complete database using Strapi CMS and Postgress SQL
 - 📝 Full recipe details: name, description, ingredients, steps, cook time, calories, servings
 - 🖤 Beautiful dark-mode design with neon highlights
 - 🧾 Ingredient list with emojis
