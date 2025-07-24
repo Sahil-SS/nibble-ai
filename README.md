@@ -1,50 +1,134 @@
-# Welcome to your Expo app 👋
+# Nibble 🍽️ — Smart Recipes. Made Simple
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Nibble AI is a sleek, dark-themed AI-powered mobile app built with **React Native** and **Expo Router**. It generates creative and personalized recipes based on your choice — making meal planning smarter, faster, and more fun.
 
-## Get started
+![Cookmate Banner](./assets/img_s1.png)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Features
 
-2. Start the app
+- ✨ AI-generated recipe suggestions based on your input
+- 📝 Full recipe details: name, description, ingredients, steps, cook time, calories, servings
+- 🖤 Beautiful dark-mode design with neon highlights
+- 🧾 Ingredient list with emojis
+- 📄 Clean, card-based recipe detail UI
+- 🔁 (Coming Soon) Carousel for recent items on the home screen
+- ❤️ (Coming Soon) Add to favorites functionality
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 📦 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **React Native** with **Expo**
+- **Expo Router** for file-based navigation
+- **OpenRouter API** for AI-generated recipes
+- **TypeScript**
+- **Custom Fonts** (Inter, Orbitron)
+- **Icon Libraries**: Ionicons, Entypo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🛠️ Installation Guide
 
-When you're ready, run:
+> ⚠️ Make sure you have [Node.js](https://nodejs.org/), [Git](https://git-scm.com/), and [Expo CLI](https://docs.expo.dev/get-started/installation/) installed globally.
+
+### 1. Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/Sahil-SS/nibble-ai
+cd nibble-ai
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+```bash
+npm install
+```
 
-## Learn more
+```bash
+npm expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🧪 Usage
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+🏠 Home
 
-## Join the community
+- View previously generated recipes
+- Carousel for recent/generated recipes (coming soon)
 
-Join our community of developers creating universal apps.
+🔍 Explore
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Enter ingredients
+- Receive 3 AI-generated recipe options
+
+📄 Recipe Details
+
+- **Tap on the Explore page and the on the Recipe to see ..**
+
+* Name
+* Description
+* Ingredients with emojis
+* Calories, Cook Time, Servings
+* Step-by-step instructions
+
+👤 Profile
+
+- Displays user avatar and basic info
+- Placeholder for future customization
+
+## 📅 Future Upgrades
+
+🔄 Migrate from OpenRouter API to a more stable API for consistent responses
+
+🖼 Incorporate AI-generated images into each recipe
+
+📚 Store previous recipes locally using SQLite or SecureStore
+
+🎠 Home screen carousel to show recent/generated recipes
+
+📤 Share recipe as image or link
+
+📊 Nutritional breakdown per recipe
+
+📡 Offline access to saved recipes
+
+❤️ Add to favorites
+
+## 📱 Screenshots
+
+<p align="center">
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s1.png" width="180"/>
+    <figcaption align="center">Landing Screen</figcaption>
+  </figure>
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s2.png" width="180"/>
+    <figcaption align="center">Home Page</figcaption>
+  </figure>
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s3.png" width="180"/>
+    <figcaption align="center">Category Options</figcaption>
+  </figure>
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s4.png" width="180"/>
+    <figcaption align="center">Generated Recipe Details</figcaption>
+  </figure>
+</p>
+
+<p align="center">
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s5.png" width="180"/>
+    <figcaption align="center">Created Recipe</figcaption>
+  </figure>
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s6.png" width="180"/>
+    <figcaption align="center">Complete Details</figcaption>
+  </figure>
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s7.png" width="180"/>
+    <figcaption align="center">Cooking Steps</figcaption>
+  </figure>
+  <figure style="display:inline-block; margin:10px">
+    <img src="./assets/img_s8.png" width="180"/>
+    <figcaption align="center">Profile Page</figcaption>
+  </figure>
+</p>

@@ -1,29 +1,47 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import Colors from "@/services/Colors";
+import { Ionicons } from "@expo/vector-icons";
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
+import { TouchableOpacity } from "react-native";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+  const [loaded, error] = useFonts({
+    orbitronBold: require("./../assets/fonts/Orbitron-Bold.ttf"),
+    interBold: require("./../assets/fonts/Inter_18pt-Bold.ttf"),
+    interRegular: require("./../assets/fonts/Inter_24pt-Regular.ttf"),
   });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Stack>
+      <Stack.Screen name="landing" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="recipe-detail/index"
+        options={{
+          title: "Recipe Detail",
+          headerTintColor: Colors.TEXT_MAIN, // color of back button and title
+          headerStyle: {
+            backgroundColor: Colors.BACKGROUND, // your app's dark background
+          },
+          headerTitleStyle: {
+            fontFamily: "interBold",
+            fontSize: 18,
+          },
+          headerRight: () => (
+            <TouchableOpacity
+              style={{ marginRight: 16 }}
+              onPress={() => {
+                console.log("Icon tapped");
+              }}
+            >
+              <Ionicons
+                name="heart-outline"
+                size={24}
+                color={Colors.TEXT_MAIN}
+              />
+            </TouchableOpacity>
+          ),
+        }}
+      />
+    </Stack>
   );
 }
